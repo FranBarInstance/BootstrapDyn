@@ -1,6 +1,35 @@
 # BootstrapDyn – Modular & Dynamic Bootstrap 5
 
-BootstrapDyn splits the original Bootstrap 5.3 CSS into **separate, modular CSS variable files** so you can theme colors, typography, or any future concern independently — without touching the component CSS.
+BootstrapDyn is a build-time utility that transforms compiled Bootstrap 5.3 CSS into a modular CSS variable architecture.
+
+Its goal is not to be a visual theme editor or a collection of ready-made themes. BootstrapDyn generates the CSS modules that make those tools possible: default theme modules, fixed component CSS, optional contrast behavior, and a bundler-friendly load order. Users and external applications can then create their own dynamic Bootstrap themes by replacing module files instead of editing Bootstrap component rules.
+
+The core idea is simple: **make Bootstrap themeable by substitution, not by overriding**.
+
+## What BootstrapDyn Produces
+
+BootstrapDyn takes `bootstrap/dist/css/bootstrap.css` and generates:
+
+1. `dist/default-*.css` modules for themeable concerns such as color, typography, spacing, borders, shadows, forms, layout, sizing, motion, layers, and grid.
+2. `dist/bootstrap-dyn.css`, the fixed Bootstrap-compatible component layer that consumes those variables.
+3. `dist/contrast-dyn.css`, an optional behavior module for dynamic contrast.
+4. `dist/bootstrap-dyn-bundle.css` and `dist/bootstrap-dyn-bundle.min.css`, optional single-file bundles for production usage.
+
+Theme authors replace one or more `default-*.css` files with complete custom modules that follow the same contract. Bootstrap HTML, component classes, and JavaScript behavior remain unchanged.
+
+## What BootstrapDyn Is Not
+
+BootstrapDyn is not a runtime JavaScript theme engine, a UI for editing themes, or a Sass-level Bootstrap fork. It is the CSS compatibility layer that lets those tools exist.
+
+For example, a theme editor can use BootstrapDyn as its foundation: expose the generated module variables in a UI, let users edit values, export complete replacement modules, and keep `bootstrap-dyn.css` untouched. One example of that kind of editor is [bootstrap-dynamic-themes](https://github.com/FranBarInstance/bootstrap-dynamic-themes).
+
+Users do not need an editor to create themes. They can download this project, copy the generated `dist/default-*.css` modules, rename them with a theme prefix, and edit the variable values directly. AI coding agents can also use the included [`theme-creation`](.agents/skills/theme-creation/SKILL.md) skill to create or update a complete theme module set.
+
+Example prompt:
+
+```text
+Use the theme-creation skill to create a BootstrapDyn theme named "midnight" in path/to/theme. Make it dark, high contrast, with cooler primary colors and slightly larger border radii.
+```
 
 ## Visual Parity and Compatibility
 
