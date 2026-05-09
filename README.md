@@ -91,7 +91,21 @@ The `text-reset` class is recommended when you want child links to inherit the c
 
 ### Do you need it?
 
-If you want the original Bootstrap behavior, **do not load** `contrast-dyn.css`. You will keep the default link colors and Bootstrap's own `data-bs-theme` approach. The file is completely optional.
+Most dynamic themes should load `contrast-dyn.css`.
+
+With this module enabled, a background utility such as `bg-primary` also applies the matching contrast variable. For text contrast, these two examples are visually equivalent:
+
+```html
+<div class="bg-primary" data-bs-theme="dark">
+    <p>Text is white because of data-bs-theme.</p>
+</div>
+
+<div class="bg-primary">
+    <p>Text automatically uses --bs-primary-contrast.</p>
+</div>
+```
+
+Only omit `contrast-dyn.css` if you want strict Bootstrap default behavior, where background utilities do not automatically set text contrast and you manage `data-bs-theme`, text utilities, or custom classes manually.
 
 For more details on how it changes Bootstrap's behavior, see [Contrast Dynamic Documentation](docs/modules/contrast-dyn.md).
 
