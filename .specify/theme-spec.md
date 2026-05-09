@@ -112,21 +112,21 @@ The canonical suffixes are derived from `extractor/constants.js`. The concern na
 
 ### 3.2 Custom Theme Modules
 
-Load either `dist/default-color.css` or `theme/color.css`, never both:
+Load either `dist/default-color.css` or `theme/custom-color.css`, never both:
 
 ```html
-<link rel="stylesheet" href="theme/color.css">
-<link rel="stylesheet" href="theme/typography.css">
-<link rel="stylesheet" href="theme/spacing.css">
-<link rel="stylesheet" href="theme/corners.css">
-<link rel="stylesheet" href="theme/shadows.css">
-<link rel="stylesheet" href="theme/borders.css">
-<link rel="stylesheet" href="theme/forms.css">
-<link rel="stylesheet" href="theme/layers.css">
-<link rel="stylesheet" href="theme/layout.css">
-<link rel="stylesheet" href="theme/motion.css">
-<link rel="stylesheet" href="theme/sizing.css">
-<link rel="stylesheet" href="theme/grid.css">
+<link rel="stylesheet" href="theme/custom-color.css">
+<link rel="stylesheet" href="theme/custom-typography.css">
+<link rel="stylesheet" href="theme/custom-spacing.css">
+<link rel="stylesheet" href="theme/custom-corners.css">
+<link rel="stylesheet" href="theme/custom-shadows.css">
+<link rel="stylesheet" href="theme/custom-borders.css">
+<link rel="stylesheet" href="theme/custom-forms.css">
+<link rel="stylesheet" href="theme/custom-layers.css">
+<link rel="stylesheet" href="theme/custom-layout.css">
+<link rel="stylesheet" href="theme/custom-motion.css">
+<link rel="stylesheet" href="theme/custom-sizing.css">
+<link rel="stylesheet" href="theme/custom-grid.css">
 <link rel="stylesheet" href="dist/bootstrap-dyn.css">
 <link rel="stylesheet" href="dist/contrast-dyn.css"> <!-- optional -->
 ```
@@ -154,7 +154,7 @@ npm run build
 For visual demo pages under `examples/demo/`, typography theme modules may include external web font imports (for example `@import` from Google Fonts) as a deliberate showcase choice.
 
 This exception is allowed only under all of the following constraints:
-1. Scope is limited to demo theme typography files (for example `examples/demo/theme/typography.css`).
+1. Scope is limited to demo theme typography files (for example `examples/demo/theme/custom-typography.css`).
 2. The module must continue to define the canonical typography variables (`--bs-typo-*`) and related required dynamic variables (`--bs-dyn-*`) consumed by `bootstrap-dyn.css`.
 3. The module must include robust local fallback font stacks so rendering remains functional when external font requests fail.
 4. No non-typography component overrides may be introduced as part of this exception.

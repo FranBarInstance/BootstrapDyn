@@ -68,7 +68,7 @@ For more details on how it changes Bootstrap's behavior, see [Contrast Dynamic D
 
 ## Theme customization
 
-Copy any `default-*.css` file to a theme file (e.g. copy `dist/default-color.css` to `theme/color.css`) and edit the values you want to change. Then load the theme file **instead of** the matching default file.
+Copy any `default-*.css` file to a theme file (e.g. copy `dist/default-color.css` to `theme/custom-color.css`) and edit the values you want to change. Then load the theme file **instead of** the matching default file.
 
 This allows fully modular theming: you can swap fonts without touching colors, or change the color palette without affecting typography.
 

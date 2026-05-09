@@ -84,18 +84,18 @@ Constraints that always apply:
 
    The page must load **theme files first**, then the fixed pipeline outputs:
    ```html
-   <link rel="stylesheet" href="./theme/color.css">
-   <link rel="stylesheet" href="./theme/typography.css">
-   <link rel="stylesheet" href="./theme/spacing.css">
-   <link rel="stylesheet" href="./theme/corners.css">
-   <link rel="stylesheet" href="./theme/shadows.css">
-   <link rel="stylesheet" href="./theme/borders.css">
-   <link rel="stylesheet" href="./theme/forms.css">
-   <link rel="stylesheet" href="./theme/layers.css">
-   <link rel="stylesheet" href="./theme/layout.css">
-   <link rel="stylesheet" href="./theme/motion.css">
-   <link rel="stylesheet" href="./theme/sizing.css">
-   <link rel="stylesheet" href="./theme/grid.css">
+   <link rel="stylesheet" href="./theme/custom-color.css">
+   <link rel="stylesheet" href="./theme/custom-typography.css">
+   <link rel="stylesheet" href="./theme/custom-spacing.css">
+   <link rel="stylesheet" href="./theme/custom-corners.css">
+   <link rel="stylesheet" href="./theme/custom-shadows.css">
+   <link rel="stylesheet" href="./theme/custom-borders.css">
+   <link rel="stylesheet" href="./theme/custom-forms.css">
+   <link rel="stylesheet" href="./theme/custom-layers.css">
+   <link rel="stylesheet" href="./theme/custom-layout.css">
+   <link rel="stylesheet" href="./theme/custom-motion.css">
+   <link rel="stylesheet" href="./theme/custom-sizing.css">
+   <link rel="stylesheet" href="./theme/custom-grid.css">
    <link rel="stylesheet" href="../../dist/bootstrap-dyn.css">
    <link rel="stylesheet" href="../../dist/contrast-dyn.css"> <!-- optional -->
    ```
@@ -114,8 +114,8 @@ Variable coverage sanity check (per concern):
 - If extras exist, they must be justified and must not break substitution semantics.
 
 ```bash
-grep -oP '--[\w-]*(?=\s*:)' dist/default-<concern>.css | sort -u > /tmp/default-vars.txt
-grep -oP '--[\w-]*(?=\s*:)' <destination>/<theme>-<concern>.css | sort -u > /tmp/theme-vars.txt
+grep -oP -- '--[\w-]*(?=\s*:)' dist/default-<concern>.css | sort -u > /tmp/default-vars.txt
+grep -oP -- '--[\w-]*(?=\s*:)' <destination>/<theme>-<concern>.css | sort -u > /tmp/theme-vars.txt
 diff /tmp/default-vars.txt /tmp/theme-vars.txt  # Should produce no output for removed vars
 ```
 
