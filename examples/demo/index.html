@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BootstrapDyn - Visual Comparison</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .header {
+      background: #2d2d2d;
+      padding: 0.8rem;
+      border-bottom: 1px solid #404040;
+      /* height: 50px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2px;
+      background: #404040;
+      height: calc(100vh - 60px);
+    }
+    .frame-wrapper {
+      background: #2d2d2d;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .frame-header {
+      background: #252525;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #404040;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .frame-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+    .frame-link {
+      font-size: 0.75rem;
+      color: #4da6ff;
+      text-decoration: none;
+    }
+    .frame-link:hover {
+      text-decoration: underline;
+    }
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+      background: #fff;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>BootstrapDyn Visual Comparison</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Original Bootstrap -->
+    <div class="frame-wrapper">
+      <div class="frame-header">
+        <span class="frame-title">Original Bootstrap (org.html)</span>
+        <a href="org.html" target="_blank" class="frame-link">Open full page →</a>
+      </div>
+      <iframe src="org.html" title="Original Bootstrap" id="frame-org"></iframe>
+    </div>
+
+    <!-- BootstrapDyn Default -->
+    <div class="frame-wrapper">
+      <div class="frame-header">
+        <span class="frame-title">BootstrapDyn (dyn.html)</span>
+        <a href="dyn.html" target="_blank" class="frame-link">Open full page →</a>
+      </div>
+      <iframe src="dyn.html" title="BootstrapDyn Default" id="frame-dyn"></iframe>
+    </div>
+
+    <!-- BootstrapDyn Bundle -->
+    <div class="frame-wrapper">
+      <div class="frame-header">
+        <span class="frame-title">BootstrapDyn Bundle (bundle.html)</span>
+        <a href="bundle.html" target="_blank" class="frame-link">Open full page →</a>
+      </div>
+      <iframe src="bundle.html" title="BootstrapDyn Bundle" id="frame-bundle"></iframe>
+    </div>
+
+    <!-- BootstrapDyn Theme -->
+    <div class="frame-wrapper">
+      <div class="frame-header">
+        <span class="frame-title">BootstrapDyn Theme (theme.html)</span>
+        <a href="theme.html" target="_blank" class="frame-link">Open full page →</a>
+      </div>
+      <iframe src="theme.html" title="BootstrapDyn Theme" id="frame-theme"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Default layout (breakpoints and container) variables */
+
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-container-sm-container-max-width: 540px;
+  --bs-dyn-container-md-container-sm-container-max-width: 720px;
+  --bs-dyn-container-lg-container-md-container-sm-container-max-width: 960px;
+  --bs-dyn-container-xl-container-lg-container-md-container-max-width: 1140px;
+  --bs-dyn-container-xxl-container-xl-container-lg-containe-max-width: 1320px;
+}

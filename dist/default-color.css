@@ -1,0 +1,294 @@
+/* default-color.css - Default color variables */
+
+/* NOTE: Inline SVG with fixed colors requires manual override */
+
+:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+[data-bs-theme=dark] {
+    --bs-body-color: #dee2e6;
+    --bs-body-color-rgb: 222, 226, 230;
+    --bs-body-bg: #212529;
+    --bs-body-bg-rgb: 33, 37, 41;
+    --bs-emphasis-color: #fff;
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-secondary-color: rgba(222, 226, 230, 0.75);
+    --bs-secondary-color-rgb: 222, 226, 230;
+    --bs-secondary-bg: #343a40;
+    --bs-secondary-bg-rgb: 52, 58, 64;
+    --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+    --bs-tertiary-color-rgb: 222, 226, 230;
+    --bs-tertiary-bg: #2b3035;
+    --bs-tertiary-bg-rgb: 43, 48, 53;
+    --bs-primary-text-emphasis: #6ea8fe;
+    --bs-secondary-text-emphasis: #a7acb1;
+    --bs-success-text-emphasis: #75b798;
+    --bs-info-text-emphasis: #6edff6;
+    --bs-warning-text-emphasis: #ffda6a;
+    --bs-danger-text-emphasis: #ea868f;
+    --bs-light-text-emphasis: #f8f9fa;
+    --bs-dark-text-emphasis: #dee2e6;
+    --bs-primary-bg-subtle: #031633;
+    --bs-secondary-bg-subtle: #161719;
+    --bs-success-bg-subtle: #051b11;
+    --bs-info-bg-subtle: #032830;
+    --bs-warning-bg-subtle: #332701;
+    --bs-danger-bg-subtle: #2c0b0e;
+    --bs-light-bg-subtle: #343a40;
+    --bs-dark-bg-subtle: #1a1d20;
+    --bs-primary-border-subtle: #084298;
+    --bs-secondary-border-subtle: #41464b;
+    --bs-success-border-subtle: #0f5132;
+    --bs-info-border-subtle: #087990;
+    --bs-warning-border-subtle: #997404;
+    --bs-danger-border-subtle: #842029;
+    --bs-light-border-subtle: #495057;
+    --bs-dark-border-subtle: #343a40;
+    --bs-heading-color: inherit;
+    --bs-link-color: #6ea8fe;
+    --bs-link-hover-color: #8bb9fe;
+    --bs-link-color-rgb: 110, 168, 254;
+    --bs-link-hover-color-rgb: 139, 185, 254;
+    --bs-code-color: #e685b5;
+    --bs-highlight-color: #dee2e6;
+    --bs-highlight-bg: #664d03;
+    --bs-border-color: #495057;
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+    --bs-form-valid-color: #75b798;
+    --bs-form-valid-border-color: #75b798;
+    --bs-form-invalid-color: #ea868f;
+    --bs-form-invalid-border-color: #ea868f;
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+:root, [data-bs-theme=light] {
+    --bs-btn-close-filter:  ;
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+[data-bs-theme=dark] {
+    --bs-btn-close-filter: invert(1) grayscale(100%) brightness(200%);
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+:root, [data-bs-theme=light] {
+    --bs-carousel-indicator-active-bg: #fff;
+    --bs-carousel-caption-color: #fff;
+    --bs-carousel-control-icon-filter:  ;
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+[data-bs-theme=dark] {
+    --bs-carousel-indicator-active-bg: #000;
+    --bs-carousel-caption-color: #000;
+    --bs-carousel-control-icon-filter: invert(1) grayscale(100);
+    --bs-primary-contrast: #fff;
+    --bs-secondary-contrast: #fff;
+    --bs-success-contrast: #fff;
+    --bs-info-contrast: #fff;
+    --bs-danger-contrast: #fff;
+    --bs-dark-contrast: #fff;
+    --bs-warning-contrast: #000;
+    --bs-light-contrast: #000
+}
+
+/* === Derived colors (dynamic) === */
+:root {
+
+  /* table */
+  --bs-dyn-table-primary-table-border-color: color-mix(in srgb, var(--bs-primary-bg-subtle), black 20%);
+  --bs-dyn-table-primary-table-striped-bg: color-mix(in srgb, var(--bs-primary-bg-subtle), black 5%);
+  --bs-dyn-table-primary-table-active-bg: color-mix(in srgb, var(--bs-primary-bg-subtle), black 10%);
+  --bs-dyn-table-primary-table-hover-bg: color-mix(in srgb, var(--bs-primary-bg-subtle), black 7.5%);
+  --bs-dyn-table-secondary-table-border-color: color-mix(in srgb, var(--bs-secondary-bg-subtle), black 20%);
+  --bs-dyn-table-secondary-table-striped-bg: color-mix(in srgb, var(--bs-secondary-bg-subtle), black 5%);
+  --bs-dyn-table-secondary-table-active-bg: color-mix(in srgb, var(--bs-secondary-bg-subtle), black 10%);
+  --bs-dyn-table-secondary-table-hover-bg: color-mix(in srgb, var(--bs-secondary-bg-subtle), black 7.5%);
+  --bs-dyn-table-success-table-border-color: color-mix(in srgb, var(--bs-success-bg-subtle), black 20%);
+  --bs-dyn-table-success-table-striped-bg: color-mix(in srgb, var(--bs-success-bg-subtle), black 5%);
+  --bs-dyn-table-success-table-active-bg: color-mix(in srgb, var(--bs-success-bg-subtle), black 10%);
+  --bs-dyn-table-success-table-hover-bg: color-mix(in srgb, var(--bs-success-bg-subtle), black 7.5%);
+  --bs-dyn-table-info-table-border-color: color-mix(in srgb, var(--bs-info-bg-subtle), black 20%);
+  --bs-dyn-table-info-table-striped-bg: color-mix(in srgb, var(--bs-info-bg-subtle), black 5%);
+  --bs-dyn-table-info-table-active-bg: color-mix(in srgb, var(--bs-info-bg-subtle), black 10%);
+  --bs-dyn-table-info-table-hover-bg: color-mix(in srgb, var(--bs-info-bg-subtle), black 7.5%);
+  --bs-dyn-table-warning-table-border-color: color-mix(in srgb, var(--bs-warning-bg-subtle), black 20%);
+  --bs-dyn-table-warning-table-striped-bg: color-mix(in srgb, var(--bs-warning-bg-subtle), black 5%);
+  --bs-dyn-table-warning-table-active-bg: color-mix(in srgb, var(--bs-warning-bg-subtle), black 10%);
+  --bs-dyn-table-warning-table-hover-bg: color-mix(in srgb, var(--bs-warning-bg-subtle), black 7.5%);
+  --bs-dyn-table-danger-table-border-color: color-mix(in srgb, var(--bs-danger-bg-subtle), black 20%);
+  --bs-dyn-table-danger-table-striped-bg: color-mix(in srgb, var(--bs-danger-bg-subtle), black 5%);
+  --bs-dyn-table-danger-table-active-bg: color-mix(in srgb, var(--bs-danger-bg-subtle), black 10%);
+  --bs-dyn-table-danger-table-hover-bg: color-mix(in srgb, var(--bs-danger-bg-subtle), black 7.5%);
+  --bs-dyn-table-light-table-border-color: color-mix(in srgb, var(--bs-light-bg-subtle), black 20%);
+  --bs-dyn-table-light-table-striped-bg: color-mix(in srgb, var(--bs-light-bg-subtle), black 5%);
+  --bs-dyn-table-light-table-active-bg: color-mix(in srgb, var(--bs-light-bg-subtle), black 10%);
+  --bs-dyn-table-light-table-hover-bg: color-mix(in srgb, var(--bs-light-bg-subtle), black 7.5%);
+  --bs-dyn-table-dark-table-border-color: color-mix(in srgb, var(--bs-dark-bg-subtle), black 20%);
+  --bs-dyn-table-dark-table-striped-bg: color-mix(in srgb, var(--bs-dark-bg-subtle), black 5%);
+  --bs-dyn-table-dark-table-active-bg: color-mix(in srgb, var(--bs-dark-bg-subtle), black 10%);
+  --bs-dyn-table-dark-table-hover-bg: color-mix(in srgb, var(--bs-dark-bg-subtle), black 7.5%);
+
+  /* form */
+  --bs-dyn-form-control-focus-border-color: #86b7fe;
+  --bs-dyn-form-select-focus-border-color: #86b7fe;
+  --bs-dyn-form-check-input-focus-border-color: #86b7fe;
+  --bs-dyn-form-range-webkit-slider-thumb-active-bg-color: #b6d4fe;
+  --bs-dyn-form-range-moz-range-thumb-active-bg-color: #b6d4fe;
+
+  /* btn */
+  --bs-dyn-btn-primary-btn-hover-bg: color-mix(in srgb, var(--bs-primary), black 10%);
+  --bs-dyn-btn-primary-btn-active-border-color: color-mix(in srgb, var(--bs-primary), black 15%);
+  --bs-dyn-btn-secondary-btn-hover-bg: color-mix(in srgb, var(--bs-secondary), black 10%);
+  --bs-dyn-btn-secondary-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary), black 12%);
+  --bs-dyn-btn-secondary-btn-active-bg: color-mix(in srgb, var(--bs-secondary), black 12%);
+  --bs-dyn-btn-secondary-btn-active-border-color: color-mix(in srgb, var(--bs-secondary), black 15%);
+  --bs-dyn-btn-success-btn-hover-bg: color-mix(in srgb, var(--bs-success), black 10%);
+  --bs-dyn-btn-success-btn-hover-border-color: color-mix(in srgb, var(--bs-success), black 12%);
+  --bs-dyn-btn-success-btn-active-bg: color-mix(in srgb, var(--bs-success), black 12%);
+  --bs-dyn-btn-success-btn-active-border-color: color-mix(in srgb, var(--bs-success), black 15%);
+  --bs-dyn-btn-info-btn-hover-bg: color-mix(in srgb, var(--bs-info), black 10%);
+  --bs-dyn-btn-info-btn-hover-border-color: color-mix(in srgb, var(--bs-info), black 12%);
+  --bs-dyn-btn-info-btn-active-bg: color-mix(in srgb, var(--bs-info), black 12%);
+  --bs-dyn-btn-info-btn-active-border-color: color-mix(in srgb, var(--bs-info), black 15%);
+  --bs-dyn-btn-warning-btn-hover-bg: color-mix(in srgb, var(--bs-warning), black 10%);
+  --bs-dyn-btn-warning-btn-hover-border-color: color-mix(in srgb, var(--bs-warning), black 12%);
+  --bs-dyn-btn-warning-btn-active-bg: color-mix(in srgb, var(--bs-warning), black 12%);
+  --bs-dyn-btn-warning-btn-active-border-color: color-mix(in srgb, var(--bs-warning), black 15%);
+  --bs-dyn-btn-danger-btn-hover-bg: color-mix(in srgb, var(--bs-danger), black 10%);
+  --bs-dyn-btn-danger-btn-hover-border-color: color-mix(in srgb, var(--bs-danger), black 12%);
+  --bs-dyn-btn-danger-btn-active-bg: color-mix(in srgb, var(--bs-danger), black 12%);
+  --bs-dyn-btn-danger-btn-active-border-color: color-mix(in srgb, var(--bs-danger), black 15%);
+  --bs-dyn-btn-light-btn-hover-bg: color-mix(in srgb, var(--bs-light), black 5%);
+  --bs-dyn-btn-light-btn-hover-border-color: color-mix(in srgb, var(--bs-light), black 10%);
+  --bs-dyn-btn-light-btn-active-bg: color-mix(in srgb, var(--bs-light), black 10%);
+  --bs-dyn-btn-light-btn-active-border-color: color-mix(in srgb, var(--bs-light), black 15%);
+  --bs-dyn-btn-dark-btn-hover-bg: color-mix(in srgb, var(--bs-dark), white 15%);
+  --bs-dyn-btn-dark-btn-hover-border-color: color-mix(in srgb, var(--bs-dark), white 20%);
+  --bs-dyn-btn-dark-btn-active-bg: color-mix(in srgb, var(--bs-dark), white 20%);
+  --bs-dyn-btn-dark-btn-active-border-color: color-mix(in srgb, var(--bs-dark), white 25%);
+}

@@ -1,0 +1,174 @@
+/*!
+ * Theme typography — handwriting style
+ *
+ * Headings & Body: Architects Daughter (playful handwriting)
+ * Code:            Fira Code (ligature-rich monospace)
+ *
+ * Colours are NOT modified (purple theme preserved).
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fira+Code:wght@400;600&display=swap');
+
+:root {
+  --bs-typo-font-sans-serif: 'Architects Daughter', cursive, sans-serif;
+  --bs-typo-font-monospace: 'Fira Code', 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bs-typo-body-font-family: var(--bs-typo-font-sans-serif);
+  --bs-typo-body-font-size: 1.1rem;
+  --bs-typo-body-font-weight: 400;
+  --bs-typo-body-line-height: 1.8;
+}
+
+/* Derived typography variables (dynamic) */
+:root {
+  --bs-dyn-h6-font-weight: 600;
+  --bs-dyn-h6-line-height: 1.3;
+  --bs-dyn-h1-font-size: calc(1.6rem + 1.8vw);
+  --bs-dyn-h1-font-size-2: 2.75rem;
+  --bs-dyn-h2-font-size: calc(1.5rem + 1.2vw);
+  --bs-dyn-h2-font-size-2: 2.25rem;
+  --bs-dyn-h3-font-size: calc(1.4rem + 0.8vw);
+  --bs-dyn-h3-font-size-2: 2rem;
+  --bs-dyn-h4-font-size: calc(1.3rem + 0.4vw);
+  --bs-dyn-h4-font-size-2: 1.65rem;
+  --bs-dyn-h5-font-size: 1.35rem;
+  --bs-dyn-h6-font-size: 1.05rem;
+  --bs-dyn-abbr-title-text-decoration: underline dotted;
+  --bs-dyn-dt-font-weight: 700;
+  --bs-dyn-b-font-weight: 700;
+  --bs-dyn-small-font-size: 0.875em;
+  --bs-dyn-sub-font-size: 0.75em;
+  --bs-dyn-sub-line-height: 0;
+  --bs-dyn-pre-font-size: 1em;
+  --bs-dyn-pre-font-size-2: 0.875em;
+  --bs-dyn-code-font-size: 0.875em;
+  --bs-dyn-kbd-font-size: 0.875em;
+  --bs-dyn-kbd-kbd-font-size: 1em;
+  --bs-dyn-th-text-align: -webkit-match-parent;
+  --bs-dyn-legend-font-size: calc(1.275rem + 0.3vw);
+  --bs-dyn-legend-font-size-2: 1.5rem;
+  --bs-dyn-lead-font-size: 1.3rem;
+  --bs-dyn-lead-font-weight: 400;
+  --bs-dyn-display-1-font-weight: 800;
+  --bs-dyn-display-1-line-height: 1.1;
+  --bs-dyn-display-1-font-size: calc(2rem + 5vw);
+  --bs-dyn-display-1-font-size-2: 5.5rem;
+  --bs-dyn-display-2-font-weight: 800;
+  --bs-dyn-display-2-line-height: 1.1;
+  --bs-dyn-display-2-font-size: calc(1.9rem + 4.2vw);
+  --bs-dyn-display-2-font-size-2: 4.75rem;
+  --bs-dyn-display-3-font-weight: 700;
+  --bs-dyn-display-3-line-height: 1.15;
+  --bs-dyn-display-3-font-size: calc(1.75rem + 3.6vw);
+  --bs-dyn-display-3-font-size-2: 4.25rem;
+  --bs-dyn-display-4-font-weight: 700;
+  --bs-dyn-display-4-line-height: 1.15;
+  --bs-dyn-display-4-font-size: calc(1.65rem + 3vw);
+  --bs-dyn-display-4-font-size-2: 3.75rem;
+  --bs-dyn-display-5-font-weight: 600;
+  --bs-dyn-display-5-line-height: 1.2;
+  --bs-dyn-display-5-font-size: calc(1.55rem + 2.4vw);
+  --bs-dyn-display-5-font-size-2: 3.25rem;
+  --bs-dyn-display-6-font-weight: 600;
+  --bs-dyn-display-6-line-height: 1.2;
+  --bs-dyn-display-6-font-size: calc(1.45rem + 1.8vw);
+  --bs-dyn-display-6-font-size-2: 2.75rem;
+  --bs-dyn-initialism-font-size: 0.875em;
+  --bs-dyn-blockquote-font-size: 1.15rem;
+  --bs-dyn-blockquote-footer-font-size: 0.875em;
+  --bs-dyn-figure-img-line-height: 1;
+  --bs-dyn-figure-caption-font-size: 0.875em;
+  --bs-dyn-col-form-label-line-height: 1.5;
+  --bs-dyn-col-form-label-lg-font-size: 1.25rem;
+  --bs-dyn-col-form-label-sm-font-size: 0.875rem;
+  --bs-dyn-form-text-font-size: 0.875em;
+  --bs-dyn-form-control-font-size: 1rem;
+  --bs-dyn-form-control-font-weight: 400;
+  --bs-dyn-form-control-line-height: 1.7;
+  --bs-dyn-form-control-plaintext-line-height: 1.7;
+  --bs-dyn-form-control-sm-font-size: 0.875rem;
+  --bs-dyn-form-control-lg-font-size: 1.125rem;
+  --bs-dyn-form-select-font-size: 1rem;
+  --bs-dyn-form-select-font-weight: 400;
+  --bs-dyn-form-select-line-height: 1.7;
+  --bs-dyn-form-select-sm-font-size: 0.875rem;
+  --bs-dyn-form-select-lg-font-size: 1.125rem;
+  --bs-dyn-form-floating-form-control-line-height: 1.25;
+  --bs-dyn-form-floating-label-text-align: start;
+  --bs-dyn-input-group-text-font-size: 1rem;
+  --bs-dyn-input-group-text-font-weight: 500;
+  --bs-dyn-input-group-text-line-height: 1.7;
+  --bs-dyn-input-group-lg-form-control-font-size: 1.125rem;
+  --bs-dyn-input-group-sm-form-control-font-size: 0.875rem;
+  --bs-dyn-valid-feedback-font-size: 0.875em;
+  --bs-dyn-valid-tooltip-font-size: 0.875rem;
+  --bs-dyn-invalid-feedback-font-size: 0.875em;
+  --bs-dyn-invalid-tooltip-font-size: 0.875rem;
+  --bs-dyn-btn-btn-font-family: 'Architects Daughter', cursive, sans-serif;
+  --bs-dyn-btn-btn-font-size: 1rem;
+  --bs-dyn-btn-btn-font-weight: 600;
+  --bs-dyn-btn-btn-line-height: 1.5;
+  --bs-dyn-btn-link-btn-font-weight: 600;
+  --bs-dyn-btn-lg-btn-font-size: 1.125rem;
+  --bs-dyn-btn-sm-btn-font-size: 0.875rem;
+  --bs-dyn-dropdown-menu-dropdown-font-size: 0.9375rem;
+  --bs-dyn-dropdown-item-font-weight: 400;
+  --bs-dyn-dropdown-header-font-size: 0.8125rem;
+  --bs-dyn-nav-nav-link-font-weight: 500;
+  --bs-dyn-nav-underline-nav-link-active-font-weight: 700;
+  --bs-dyn-navbar-nav-nav-link-font-weight: 500;
+  --bs-dyn-navbar-toggler-line-height: 1;
+  --bs-dyn-accordion-button-font-size: 1rem;
+  --bs-dyn-pagination-pagination-font-size: 0.9375rem;
+  --bs-dyn-pagination-lg-pagination-font-size: 1.125rem;
+  --bs-dyn-pagination-sm-pagination-font-size: 0.8125rem;
+  --bs-dyn-badge-badge-font-size: 0.75em;
+  --bs-dyn-badge-badge-font-weight: 600;
+  --bs-dyn-badge-line-height: 1;
+  --bs-dyn-alert-link-font-weight: 600;
+  --bs-dyn-progress-progress-font-size: 0.75rem;
+  --bs-dyn-toast-toast-font-size: 0.875rem;
+  --bs-dyn-modal-modal-title-line-height: 1.4;
+  --bs-dyn-tooltip-font-weight: 400;
+  --bs-dyn-tooltip-line-height: 1.5;
+  --bs-dyn-tooltip-text-align: start;
+  --bs-dyn-popover-font-weight: 400;
+  --bs-dyn-popover-line-height: 1.5;
+  --bs-dyn-popover-text-align: start;
+  --bs-dyn-carousel-indicators-data-bs-target-text-indent: -999px;
+  --bs-dyn-offcanvas-offcanvas-title-line-height: 1.4;
+  --bs-dyn-fs-1-font-size: calc(1.6rem + 1.8vw);
+  --bs-dyn-fs-2-font-size: calc(1.5rem + 1.2vw);
+  --bs-dyn-fs-3-font-size: calc(1.4rem + 0.8vw);
+  --bs-dyn-fs-4-font-size: calc(1.3rem + 0.4vw);
+  --bs-dyn-fs-5-font-size: 1.35rem;
+  --bs-dyn-fs-6-font-size: 1.05rem;
+  --bs-dyn-fw-lighter-font-weight: 300;
+  --bs-dyn-fw-light-font-weight: 300;
+  --bs-dyn-fw-normal-font-weight: 400;
+  --bs-dyn-fw-medium-font-weight: 500;
+  --bs-dyn-fw-semibold-font-weight: 600;
+  --bs-dyn-fw-bold-font-weight: 700;
+  --bs-dyn-fw-bolder-font-weight: 800;
+  --bs-dyn-lh-1-line-height: 1;
+  --bs-dyn-lh-sm-line-height: 1.25;
+  --bs-dyn-lh-base-line-height: 1.7;
+  --bs-dyn-lh-lg-line-height: 2;
+  --bs-dyn-fs-1-font-size-2: 2.75rem;
+  --bs-dyn-fs-2-font-size-2: 2.25rem;
+  --bs-dyn-fs-3-font-size-2: 2rem;
+  --bs-dyn-fs-4-font-size-2: 1.65rem;
+}
+
+/* Force headings to use Architects Daughter */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.navbar-brand,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.card-title, .modal-title, .offcanvas-title,
+.blockquote,
+.alert-heading,
+.popover-header, .dropdown-header {
+  font-family: 'Architects Daughter', cursive, sans-serif !important;
+  font-weight: 700;
+}

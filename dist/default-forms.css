@@ -1,0 +1,32 @@
+/* Default form variables */
+
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-form-control-webkit-date-and-time-value-height: 1.5em;
+  --bs-dyn-form-control-sm-min-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-control-lg-min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-textarea-form-control-min-height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-textarea-form-control-sm-min-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-textarea-form-control-lg-min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-control-color-width: 3rem;
+  --bs-dyn-form-control-color-height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-control-color-form-control-sm-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-control-color-form-control-lg-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-check-min-height: 1.5rem;
+  --bs-dyn-form-check-input-width: 1em;
+  --bs-dyn-form-check-input-height: 1em;
+  --bs-dyn-form-switch-form-check-input-width: 2em;
+  --bs-dyn-form-range-height: 1.5rem;
+  --bs-dyn-form-range-webkit-slider-thumb-width: 1rem;
+  --bs-dyn-form-range-webkit-slider-thumb-height: 1rem;
+  --bs-dyn-form-range-webkit-slider-runnable-track-height: 0.5rem;
+  --bs-dyn-form-range-moz-range-thumb-width: 1rem;
+  --bs-dyn-form-range-moz-range-thumb-height: 1rem;
+  --bs-dyn-form-range-moz-range-track-height: 0.5rem;
+  --bs-dyn-form-floating-form-control-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-floating-form-control-min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+  --bs-dyn-form-floating-textarea-focus-label-after-height: 1.5em;
+  --bs-dyn-was-validated-form-control-color-valid-width: calc(3rem + calc(1.5em + 0.75rem));
+  --bs-dyn-was-validated-form-control-color-invalid-width: calc(3rem + calc(1.5em + 0.75rem));
+}

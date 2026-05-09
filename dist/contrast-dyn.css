@@ -1,0 +1,171 @@
+/* contrast-dyn.css - Dynamic contrast rules */
+
+/* === Contrast rules for backgrounds and outline buttons === */
+
+/* Backgrounds */
+.bg-primary { color: var(--bs-primary-contrast); }
+.bg-secondary { color: var(--bs-secondary-contrast); }
+.bg-success { color: var(--bs-success-contrast); }
+.bg-info { color: var(--bs-info-contrast); }
+.bg-warning { color: var(--bs-warning-contrast); }
+.bg-danger { color: var(--bs-danger-contrast); }
+.bg-dark { color: var(--bs-dark-contrast); }
+.bg-light { color: var(--bs-light-contrast); }
+
+/* === Text colors for contrast backgrounds === */
+/* Ensure text in navbar, nav, etc. uses contrast colors */
+
+.bg-primary .navbar-brand,
+.bg-primary .navbar-nav .nav-link,
+.bg-primary .nav-link,
+.bg-primary .text-muted,
+.bg-primary .text-body,
+.bg-primary .card-title,
+.bg-primary .card-text {
+  color: var(--bs-primary-contrast) !important;
+}
+
+.bg-secondary .navbar-brand,
+.bg-secondary .navbar-nav .nav-link,
+.bg-secondary .nav-link,
+.bg-secondary .text-muted,
+.bg-secondary .text-body,
+.bg-secondary .card-title,
+.bg-secondary .card-text {
+  color: var(--bs-secondary-contrast) !important;
+}
+
+.bg-success .navbar-brand,
+.bg-success .navbar-nav .nav-link,
+.bg-success .nav-link,
+.bg-success .text-muted,
+.bg-success .text-body,
+.bg-success .card-title,
+.bg-success .card-text {
+  color: var(--bs-success-contrast) !important;
+}
+
+.bg-info .navbar-brand,
+.bg-info .navbar-nav .nav-link,
+.bg-info .nav-link,
+.bg-info .text-muted,
+.bg-info .text-body,
+.bg-info .card-title,
+.bg-info .card-text {
+  color: var(--bs-info-contrast) !important;
+}
+
+.bg-warning .navbar-brand,
+.bg-warning .navbar-nav .nav-link,
+.bg-warning .nav-link,
+.bg-warning .text-muted,
+.bg-warning .text-body,
+.bg-warning .card-title,
+.bg-warning .card-text {
+  color: var(--bs-warning-contrast) !important;
+}
+
+.bg-danger .navbar-brand,
+.bg-danger .navbar-nav .nav-link,
+.bg-danger .nav-link,
+.bg-danger .text-muted,
+.bg-danger .text-body,
+.bg-danger .card-title,
+.bg-danger .card-text {
+  color: var(--bs-danger-contrast) !important;
+}
+
+.bg-dark .navbar-brand,
+.bg-dark .navbar-nav .nav-link,
+.bg-dark .nav-link,
+.bg-dark .text-muted,
+.bg-dark .text-body,
+.bg-dark .card-title,
+.bg-dark .card-text {
+  color: var(--bs-dark-contrast) !important;
+}
+
+.bg-light .navbar-brand,
+.bg-light .navbar-nav .nav-link,
+.bg-light .nav-link,
+.bg-light .text-muted,
+.bg-light .text-body,
+.bg-light .card-title,
+.bg-light .card-text {
+  color: var(--bs-light-contrast) !important;
+}
+
+/* === Universal text reset for contrast backgrounds === */
+/* Alternative approach: add text-reset class that works with contrast */
+.bg-primary .text-reset,
+.bg-secondary .text-reset,
+.bg-success .text-reset,
+.bg-info .text-reset,
+.bg-warning .text-reset,
+.bg-danger .text-reset,
+.bg-dark .text-reset,
+.bg-light .text-reset {
+  color: inherit !important;
+}
+
+/* Outline buttons: hover and active */
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  color: var(--bs-primary-contrast);
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active {
+  color: var(--bs-secondary-contrast);
+}
+.btn-outline-success:hover,
+.btn-outline-success:active {
+  color: var(--bs-success-contrast);
+}
+.btn-outline-info:hover,
+.btn-outline-info:active {
+  color: var(--bs-info-contrast);
+}
+.btn-outline-warning:hover,
+.btn-outline-warning:active {
+  color: var(--bs-warning-contrast);
+}
+.btn-outline-danger:hover,
+.btn-outline-danger:active {
+  color: var(--bs-danger-contrast);
+}
+.btn-outline-dark:hover,
+.btn-outline-dark:active {
+  color: var(--bs-dark-contrast);
+}
+
+/* Special case: outline-light */
+.btn-outline-light:hover,
+.btn-outline-light:active {
+  background-color: var(--bs-light);
+  border-color: var(--bs-light);
+  color: var(--bs-light-contrast);
+}
+.btn-outline-light {
+  --bs-btn-color: currentColor;
+  --bs-btn-border-color: currentColor;
+}
+
+/* navbar toggler icon */
+.navbar .btn,
+.navbar .navbar-toggler,
+.navbar .navbar-toggler-icon {
+  color: inherit;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}

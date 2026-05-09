@@ -1,0 +1,58 @@
+/* Default layer (z-index) variables */
+
+:root {
+  --bs-dropdown-zindex: 1000;
+  --bs-toast-zindex: 1090;
+  --bs-modal-zindex: 1055;
+  --bs-backdrop-zindex: 1050;
+  --bs-tooltip-zindex: 1080;
+  --bs-popover-zindex: 1070;
+  --bs-offcanvas-zindex: 1045;
+}
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-form-floating-label-z-index: 2;
+  --bs-dyn-form-floating-textarea-focus-label-after-z-index: -1;
+  --bs-dyn-input-group-form-control-focus-z-index: 5;
+  --bs-dyn-input-group-btn-z-index: 2;
+  --bs-dyn-input-group-btn-focus-z-index: 5;
+  --bs-dyn-valid-tooltip-z-index: 5;
+  --bs-dyn-was-validated-input-group-form-control-not-focus-z-index: 3;
+  --bs-dyn-invalid-tooltip-z-index: 5;
+  --bs-dyn-was-validated-input-group-form-control-not-focus-z-index-2: 4;
+  --bs-dyn-btn-group-btn-check-checked-btn-z-index: 1;
+  --bs-dyn-accordion-button-hover-z-index: 2;
+  --bs-dyn-accordion-button-focus-z-index: 3;
+  --bs-dyn-page-link-hover-z-index: 2;
+  --bs-dyn-page-link-focus-z-index: 3;
+  --bs-dyn-page-link-active-z-index: 3;
+  --bs-dyn-alert-dismissible-btn-close-z-index: 2;
+  --bs-dyn-list-group-item-active-z-index: 2;
+  --bs-dyn-list-group-item-action-not-active-hover-z-index: 1;
+  --bs-dyn-carousel-fade-carousel-item-active-z-index: 1;
+  --bs-dyn-carousel-fade-active-carousel-item-start-z-index: 0;
+  --bs-dyn-carousel-control-prev-z-index: 1;
+  --bs-dyn-carousel-indicators-z-index: 2;
+  --bs-dyn-offcanvas-backdrop-z-index: 1040;
+  --bs-dyn-fixed-top-z-index: 1030;
+  --bs-dyn-fixed-bottom-z-index: 1030;
+  --bs-dyn-sticky-top-z-index: 1020;
+  --bs-dyn-sticky-bottom-z-index: 1020;
+  --bs-dyn-sticky-sm-top-z-index: 1020;
+  --bs-dyn-sticky-sm-bottom-z-index: 1020;
+  --bs-dyn-sticky-md-top-z-index: 1020;
+  --bs-dyn-sticky-md-bottom-z-index: 1020;
+  --bs-dyn-sticky-lg-top-z-index: 1020;
+  --bs-dyn-sticky-lg-bottom-z-index: 1020;
+  --bs-dyn-sticky-xl-top-z-index: 1020;
+  --bs-dyn-sticky-xl-bottom-z-index: 1020;
+  --bs-dyn-sticky-xxl-top-z-index: 1020;
+  --bs-dyn-sticky-xxl-bottom-z-index: 1020;
+  --bs-dyn-stretched-link-after-z-index: 1;
+  --bs-dyn-z-n1-z-index: -1;
+  --bs-dyn-z-0-z-index: 0;
+  --bs-dyn-z-1-z-index: 1;
+  --bs-dyn-z-2-z-index: 2;
+  --bs-dyn-z-3-z-index: 3;
+}

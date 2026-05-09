@@ -1,0 +1,122 @@
+/*!
+ * Theme corners — generous, modern border-radius
+ *
+ * Colours are NOT modified (purple theme preserved).
+ */
+
+:root {
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-sm: 0.5rem;
+  --bs-border-radius-lg: 1.25rem;
+  --bs-border-radius-xl: 2rem;
+  --bs-border-radius-xxl: 3rem;
+  --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+  --bs-border-radius-pill: 50rem;
+  --bs-border-radius-top-left: 0;
+  --bs-border-radius-top-right: var(--bs-border-radius);
+  --bs-border-radius-bottom-right: 0;
+  --bs-border-radius-bottom-left: var(--bs-border-radius);
+}
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-kbd-border-radius: 0.5rem;
+  --bs-dyn-button-border-radius: 0.75rem;
+  --bs-dyn-form-control-webkit-file-upload-button-border-radius: 0.75rem;
+  --bs-dyn-form-control-file-selector-button-border-radius: 0.75rem;
+  --bs-dyn-form-check-input-type-checkbox-border-radius: 0.375rem;
+  --bs-dyn-form-switch-form-check-input-border-radius: 2em;
+  --bs-dyn-form-range-webkit-slider-thumb-border-radius: 50%;
+  --bs-dyn-form-range-webkit-slider-runnable-track-border-radius: 1rem;
+  --bs-dyn-form-range-moz-range-thumb-border-radius: 50%;
+  --bs-dyn-form-range-moz-range-track-border-radius: 1rem;
+  --bs-dyn-input-group-not-has-validation-not-last-child-no-border-top-right-radius: 0;
+  --bs-dyn-input-group-not-has-validation-not-last-child-no-border-bottom-right-radius: 0;
+  --bs-dyn-input-group-has-validation-nth-last-child-n-3-no-border-top-right-radius: 0;
+  --bs-dyn-input-group-has-validation-nth-last-child-n-3-no-border-bottom-right-radius: 0;
+  --bs-dyn-input-group-not-first-child-not-dropdown-menu-no-border-top-left-radius: 0;
+  --bs-dyn-input-group-not-first-child-not-dropdown-menu-no-border-bottom-left-radius: 0;
+  --bs-dyn-input-group-form-floating-not-first-child-form-c-border-top-left-radius: 0;
+  --bs-dyn-input-group-form-floating-not-first-child-form-c-border-bottom-left-radius: 0;
+  --bs-dyn-dropdown-menu-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
+  --bs-dyn-btn-group-btn-not-last-child-not-dropdown-toggle-border-top-right-radius: 0;
+  --bs-dyn-btn-group-btn-not-last-child-not-dropdown-toggle-border-bottom-right-radius: 0;
+  --bs-dyn-btn-group-btn-nth-child-n-3-border-top-left-radius: 0;
+  --bs-dyn-btn-group-btn-nth-child-n-3-border-bottom-left-radius: 0;
+  --bs-dyn-btn-group-vertical-btn-not-last-child-not-dropdo-border-bottom-right-radius: 0;
+  --bs-dyn-btn-group-vertical-btn-not-last-child-not-dropdo-border-bottom-left-radius: 0;
+  --bs-dyn-btn-group-vertical-btn-nth-child-n-3-border-top-left-radius: 0;
+  --bs-dyn-btn-group-vertical-btn-nth-child-n-3-border-top-right-radius: 0;
+  --bs-dyn-nav-tabs-dropdown-menu-border-top-left-radius: 0;
+  --bs-dyn-nav-tabs-dropdown-menu-border-top-right-radius: 0;
+  --bs-dyn-card-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-dyn-card-group-card-not-last-child-border-top-right-radius: 0;
+  --bs-dyn-card-group-card-not-last-child-border-bottom-right-radius: 0;
+  --bs-dyn-card-group-card-not-last-child-card-img-top-border-top-right-radius: 0;
+  --bs-dyn-card-group-card-not-last-child-card-img-bottom-border-bottom-right-radius: 0;
+  --bs-dyn-card-group-card-not-first-child-border-top-left-radius: 0;
+  --bs-dyn-card-group-card-not-first-child-border-bottom-left-radius: 0;
+  --bs-dyn-card-group-card-not-first-child-card-img-top-border-top-left-radius: 0;
+  --bs-dyn-card-group-card-not-first-child-card-img-bottom-border-bottom-left-radius: 0;
+  --bs-dyn-accordion-accordion-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-dyn-accordion-button-border-radius: 0.75rem;
+  --bs-dyn-accordion-flush-accordion-item-border-radius: 0;
+  --bs-dyn-accordion-flush-accordion-item-accordion-collaps-border-radius: 0;
+  --bs-dyn-list-group-horizontal-list-group-item-first-chil-border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-list-group-item-last-child-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-horizontal-sm-list-group-item-first-c-border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-sm-list-group-item-last-ch-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-horizontal-md-list-group-item-first-c-border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-md-list-group-item-last-ch-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-horizontal-lg-list-group-item-first-c-border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-lg-list-group-item-last-ch-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-horizontal-xl-list-group-item-first-c-border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-xl-list-group-item-last-ch-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-horizontal-xxl-list-group-item-first--border-top-right-radius: 0;
+  --bs-dyn-list-group-horizontal-xxl-list-group-item-last-c-border-bottom-left-radius: 0;
+  --bs-dyn-list-group-flush-border-radius: 0;
+  --bs-dyn-btn-close-border-radius: 0.75rem;
+  --bs-dyn-toast-header-border-top-left-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width));
+  --bs-dyn-toast-header-border-top-right-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width));
+  --bs-dyn-modal-fullscreen-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-modal-header-border-radius: 0;
+  --bs-dyn-modal-fullscreen-sm-down-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-sm-down-modal-header-border-radius: 0;
+  --bs-dyn-modal-fullscreen-md-down-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-md-down-modal-header-border-radius: 0;
+  --bs-dyn-modal-fullscreen-lg-down-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-lg-down-modal-header-border-radius: 0;
+  --bs-dyn-modal-fullscreen-xl-down-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-xl-down-modal-header-border-radius: 0;
+  --bs-dyn-modal-fullscreen-xxl-down-modal-content-border-radius: 0;
+  --bs-dyn-modal-fullscreen-xxl-down-modal-header-border-radius: 0;
+  --bs-dyn-rounded-0-border-radius: 0;
+  --bs-dyn-rounded-top-0-border-top-left-radius: 0;
+  --bs-dyn-rounded-top-0-border-top-right-radius: 0;
+  --bs-dyn-rounded-end-0-border-top-right-radius: 0;
+  --bs-dyn-rounded-end-0-border-bottom-right-radius: 0;
+  --bs-dyn-rounded-bottom-0-border-bottom-right-radius: 0;
+  --bs-dyn-rounded-bottom-0-border-bottom-left-radius: 0;
+  --bs-dyn-rounded-start-0-border-bottom-left-radius: 0;
+  --bs-dyn-rounded-start-0-border-top-left-radius: 0;
+}
+
+/* Decompose border-radius shorthand into individual corners so per-corner
+   theme variables take effect. Loaded after bootstrap-dyn.css via theme.html */
+.btn, .card, .alert, .badge, .breadcrumb, .list-group,
+.form-control, .form-select, .input-group-text, .img-thumbnail,
+.nav-tabs .nav-link, .nav-pills .nav-link, .page-link,
+.accordion-item, .accordion-button, .dropdown-menu, .toast,
+.modal-content, .popover, .tooltip-inner, .pagination,
+.progress, .navbar-toggler,
+.card-header:first-child, .card-img-top, .card-img-overlay,
+.card > .list-group:first-child, .card-footer:last-child,
+.card-img-bottom,
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button.collapsed,
+.toast-header {
+  border-top-left-radius: var(--bs-border-radius-top-left, var(--bs-border-radius)) !important;
+  border-top-right-radius: var(--bs-border-radius-top-right, var(--bs-border-radius)) !important;
+  border-bottom-right-radius: var(--bs-border-radius-bottom-right, var(--bs-border-radius)) !important;
+  border-bottom-left-radius: var(--bs-border-radius-bottom-left, var(--bs-border-radius)) !important;
+}

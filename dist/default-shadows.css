@@ -1,0 +1,72 @@
+/* Default shadow variables */
+
+:root {
+  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-focus-ring-width: 0.25rem;
+  --bs-focus-ring-opacity: 0.25;
+  --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+}
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-table-not-caption-box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+  --bs-dyn-form-control-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-form-select-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-form-check-input-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-form-range-focus-webkit-slider-thumb-box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-form-range-focus-moz-range-thumb-box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-was-validated-form-control-valid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
+  --bs-dyn-was-validated-form-select-valid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
+  --bs-dyn-was-validated-form-check-input-valid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
+  --bs-dyn-was-validated-form-control-invalid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  --bs-dyn-was-validated-form-select-invalid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  --bs-dyn-was-validated-form-check-input-invalid-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  --bs-dyn-btn-btn-box-shadow: none;
+  --bs-dyn-btn-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  --bs-dyn-btn-primary-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-secondary-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-success-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-info-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-warning-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-danger-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-light-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-dark-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-primary-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-secondary-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-success-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-info-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-warning-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-danger-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-light-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-outline-dark-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-dyn-btn-link-btn-box-shadow: 0 0 0 #000;
+  --bs-dyn-dropdown-menu-dark-dropdown-box-shadow: none;
+  --bs-dyn-nav-link-focus-visible-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-dyn-card-card-box-shadow: none;
+  --bs-dyn-accordion-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  --bs-dyn-accordion-button-not-collapsed-box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+  --bs-dyn-pagination-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  --bs-dyn-btn-close-btn-close-focus-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  --bs-dyn-tooltip-text-shadow: none;
+  --bs-dyn-popover-text-shadow: none;
+  --bs-dyn-shadow-none-box-shadow: none;
+  --bs-dyn-focus-ring-primary-focus-ring-color: rgba(var(--bs-primary-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-secondary-focus-ring-color: rgba(var(--bs-secondary-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-success-focus-ring-color: rgba(var(--bs-success-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-info-focus-ring-color: rgba(var(--bs-info-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-warning-focus-ring-color: rgba(var(--bs-warning-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-danger-focus-ring-color: rgba(var(--bs-danger-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-light-focus-ring-color: rgba(var(--bs-light-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-focus-ring-dark-focus-ring-color: rgba(var(--bs-dark-rgb), var(--bs-focus-ring-opacity));
+  --bs-dyn-table-box-shadow: none;
+  --bs-dyn-navbar-box-shadow: none;
+  --bs-dyn-alert-box-shadow: none;
+  --bs-dyn-img-thumbnail-box-shadow: none;
+  --bs-dyn-accordion-item-box-shadow: none;
+  --bs-dyn-badge-box-shadow: none;
+  --bs-dyn-list-group-box-shadow: none;
+  --bs-dyn-breadcrumb-box-shadow: none;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bootstrapdyn",
+  "version": "5.3.0",
+  "bootstrapVersion": "5.3.8",
+  "description": "This system transforms the original Bootstrap 5.3 CSS into a CSS custom property architecture through a **chain of independent modules**. Each module handles a specific aspect (colors, typography, grid, utilities, etc.) and progressively modifies `bootstrap-dyn.css`.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --test tests/**/*.test.js",
+    "bundle": "node scripts/bundle.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "postcss": "^8.5.14"
+  }
+}

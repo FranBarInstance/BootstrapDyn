@@ -1,0 +1,43 @@
+/*!
+ * Theme sizing — refined dimensions for interactive elements
+ *
+ * Colours are NOT modified (purple theme preserved).
+ */
+
+/* Derived variables (dynamic) */
+:root {
+  --bs-dyn-form-control-webkit-date-and-time-value-min-width: 85px;
+  --bs-dyn-navbar-toggler-icon-width: 1.5em;
+  --bs-dyn-navbar-toggler-icon-height: 1.5em;
+  --bs-dyn-btn-close-width: 1em;
+  --bs-dyn-btn-close-height: 1em;
+  --bs-dyn-modal-dialog-scrollable-height: calc(100% - var(--bs-modal-margin) * 2);
+  --bs-dyn-modal-dialog-centered-min-height: calc(100% - var(--bs-modal-margin) * 2);
+  --bs-dyn-modal-backdrop-width: 100vw;
+  --bs-dyn-modal-backdrop-height: 100vh;
+  --bs-dyn-modal-fullscreen-width: 100vw;
+  --bs-dyn-modal-fullscreen-sm-down-width: 100vw;
+  --bs-dyn-modal-fullscreen-md-down-width: 100vw;
+  --bs-dyn-modal-fullscreen-lg-down-width: 100vw;
+  --bs-dyn-modal-fullscreen-xl-down-width: 100vw;
+  --bs-dyn-modal-fullscreen-xxl-down-width: 100vw;
+  --bs-dyn-carousel-control-prev-icon-width: 2.5rem;
+  --bs-dyn-carousel-control-prev-icon-height: 2.5rem;
+  --bs-dyn-carousel-indicators-data-bs-target-width: 32px;
+  --bs-dyn-carousel-indicators-data-bs-target-height: 4px;
+  --bs-dyn-offcanvas-backdrop-width: 100vw;
+  --bs-dyn-offcanvas-backdrop-height: 100vh;
+  --bs-dyn-placeholder-min-height: 1em;
+  --bs-dyn-placeholder-xs-min-height: 0.6em;
+  --bs-dyn-placeholder-sm-min-height: 0.8em;
+  --bs-dyn-placeholder-lg-min-height: 1.2em;
+  --bs-dyn-icon-link-bi-width: 1em;
+  --bs-dyn-icon-link-bi-height: 1em;
+  --bs-dyn-visually-hidden-width: 1px;
+  --bs-dyn-visually-hidden-height: 1px;
+  --bs-dyn-vr-min-height: 1em;
+  --bs-dyn-vw-100-width: 100vw;
+  --bs-dyn-min-vw-100-min-width: 100vw;
+  --bs-dyn-vh-100-height: 100vh;
+  --bs-dyn-min-vh-100-min-height: 100vh;
+}
