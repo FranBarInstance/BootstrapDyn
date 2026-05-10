@@ -139,6 +139,26 @@ Writes:
 - `default-color.css`
 - `contrast-dyn.css`
 
+### 5.3.1 Dynamic Color Derivation with `color-mix()`
+
+**Problem:** Bootstrap's compiled CSS contains many derived colors produced by Sass functions (e.g., `rgba()`, `mix()`, `tint-shade`). These are static values baked into the CSS. When BootstrapDyn replaces base colors with CSS custom properties, the derived values must remain correct even when the base variables change at runtime.
+
+**Solution:** Use CSS `color-mix()` to express derived colors as dynamic formulas referencing theme variables.
+
+**Rules:**
+
+1. **Prefer `color-mix()` over static derived values** whenever a derived color can be expressed as a mix of a theme variable plus a known color (usually white, black, or transparent).
+2. **Use `in srgb` as the default color space** unless a specific perceptual requirement justifies another space.
+3. **Do not generate `--bs-dyn-*` variables for simple `color-mix()` expressions** that can be written inline; keep component CSS readable and themable.
+4. **Document the intended Bootstrap equivalent** in comments when the derivation replaces a known Sass computation.
+5. **`color-mix()` must be contained in `bootstrap-dyn.css` or `contrast-dyn.css`**; theme variable files (`default-*.css`) define the base colors, not the mix formulas.
+
+**Examples:**
+- Navbar normal text on dark bg: `color-mix(in srgb, var(--bs-primary-contrast), transparent 45%)` replaces the Sass-derived semitransparent white.
+- Table hover tint: `color-mix(in srgb, var(--bs-primary), transparent 95%)` replaces a static `rgba(..., 0.05)`.
+
+**Rationale:** This preserves strict visual fidelity with the original Bootstrap output when using default variables, while keeping the result fully dynamic for theming.
+
 ### 5.4 `extractor/extract-typography.js`
 
 Responsibilities:
@@ -377,6 +397,7 @@ Expected content types:
 - Contrast text rules for selected nested components
 - `.text-reset` compatibility rules
 - `.btn-outline-*` hover/active contrast behavior
+- `color-mix(...)` derived contrast colors where transparency is required (e.g., navbar link states); see §5.3.1
 
 Must not include:
 - Contrast variable definitions (`--bs-*-contrast`)
@@ -427,7 +448,7 @@ Run command:
 
 - Current extraction logic is tuned to Bootstrap 5.3.x compiled CSS structure.
 - **Strict Visual Parity**: All transformations must be validated against the source Bootstrap to ensure no visual regressions are introduced during extraction.
-- `color-mix(...)` support is required for full derived-color behavior.
+- `color-mix(...)` support is required for full derived-color behavior; usage rules are defined in §5.3.1.
 - Inline SVG or hardcoded embedded color values may require manual override (explicitly documented by the color module output header).
 
 ## 13. Evolution Guidelines
