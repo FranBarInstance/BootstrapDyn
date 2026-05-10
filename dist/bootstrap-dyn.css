@@ -4409,7 +4409,7 @@ textarea.form-control-lg {
 }
 
 .modal-dialog-scrollable {
-  height: var(--bs-dyn-modal-dialog-scrollable-height);
+  height: calc(100% - var(--bs-modal-margin) * 2);
 }
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
@@ -4422,7 +4422,7 @@ textarea.form-control-lg {
 .modal-dialog-centered {
   display: flex;
   align-items: center;
-  min-height: var(--bs-dyn-modal-dialog-centered-min-height);
+  min-height: calc(100% - var(--bs-modal-margin) * 2);
 }
 
 .modal-content {

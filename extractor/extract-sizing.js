@@ -30,7 +30,7 @@ function isSizingProp(prop) {
 function isSizingLiteral(value) {
   if (!value) return false;
   const v = value.trim();
-  if (v.startsWith("var(")) return false;
+  if (v.includes("var(")) return false;
   if (SKIP_VALUES.has(v) || SKIP_VALUES.has(v.toLowerCase())) return false;
   if (v === "auto" || v === "none" || v === "inherit" || v === "initial") return false;
 
@@ -68,7 +68,7 @@ export async function processSizing(inputCssPath, outputDir = "./dist") {
     if (!isSizingProp(decl.prop)) return;
 
     const rawVal = decl.value.trim();
-    if (rawVal.startsWith("var(")) return;
+    if (rawVal.includes("var(")) return;
     if (!isSizingLiteral(rawVal)) {
       if (SKIP_VALUES.has(rawVal) || SKIP_VALUES.has(rawVal.toLowerCase())) stats.countSkipped++;
       return;
