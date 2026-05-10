@@ -15,8 +15,6 @@
 /* === Text colors for contrast backgrounds === */
 /* Ensure text in navbar, nav, etc. uses contrast colors */
 
-.bg-primary .navbar-brand,
-.bg-primary .navbar-nav .nav-link,
 .bg-primary .text-muted,
 .bg-primary .text-body,
 .bg-primary .card-title,
@@ -24,8 +22,6 @@
   color: var(--bs-primary-contrast) !important;
 }
 
-.bg-secondary .navbar-brand,
-.bg-secondary .navbar-nav .nav-link,
 .bg-secondary .text-muted,
 .bg-secondary .text-body,
 .bg-secondary .card-title,
@@ -33,8 +29,6 @@
   color: var(--bs-secondary-contrast) !important;
 }
 
-.bg-success .navbar-brand,
-.bg-success .navbar-nav .nav-link,
 .bg-success .text-muted,
 .bg-success .text-body,
 .bg-success .card-title,
@@ -42,8 +36,6 @@
   color: var(--bs-success-contrast) !important;
 }
 
-.bg-info .navbar-brand,
-.bg-info .navbar-nav .nav-link,
 .bg-info .text-muted,
 .bg-info .text-body,
 .bg-info .card-title,
@@ -51,8 +43,6 @@
   color: var(--bs-info-contrast) !important;
 }
 
-.bg-warning .navbar-brand,
-.bg-warning .navbar-nav .nav-link,
 .bg-warning .text-muted,
 .bg-warning .text-body,
 .bg-warning .card-title,
@@ -60,8 +50,6 @@
   color: var(--bs-warning-contrast) !important;
 }
 
-.bg-danger .navbar-brand,
-.bg-danger .navbar-nav .nav-link,
 .bg-danger .text-muted,
 .bg-danger .text-body,
 .bg-danger .card-title,
@@ -69,8 +57,6 @@
   color: var(--bs-danger-contrast) !important;
 }
 
-.bg-dark .navbar-brand,
-.bg-dark .navbar-nav .nav-link,
 .bg-dark .text-muted,
 .bg-dark .text-body,
 .bg-dark .card-title,
@@ -78,8 +64,6 @@
   color: var(--bs-dark-contrast) !important;
 }
 
-.bg-light .navbar-brand,
-.bg-light .navbar-nav .nav-link,
 .bg-light .text-muted,
 .bg-light .text-body,
 .bg-light .card-title,
@@ -87,30 +71,106 @@
   color: var(--bs-light-contrast) !important;
 }
 
-/* === Nav link contrast (outside navbar) === */
+/* === Nav link contrast === */
 .bg-primary .nav-link {
-  color: var(--bs-primary-link-contrast) !important;
+  color: var(--bs-primary-link-contrast);
+}
+.bg-primary .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-primary-contrast), transparent 45%);
+}
+.bg-primary .navbar-nav .nav-link.active,
+.bg-primary .navbar-nav .nav-link.show {
+  color: var(--bs-primary-contrast);
 }
 .bg-secondary .nav-link {
-  color: var(--bs-secondary-link-contrast) !important;
+  color: var(--bs-secondary-link-contrast);
+}
+.bg-secondary .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-secondary-contrast), transparent 45%);
+}
+.bg-secondary .navbar-nav .nav-link.active,
+.bg-secondary .navbar-nav .nav-link.show {
+  color: var(--bs-secondary-contrast);
 }
 .bg-success .nav-link {
-  color: var(--bs-success-link-contrast) !important;
+  color: var(--bs-success-link-contrast);
+}
+.bg-success .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-success-contrast), transparent 45%);
+}
+.bg-success .navbar-nav .nav-link.active,
+.bg-success .navbar-nav .nav-link.show {
+  color: var(--bs-success-contrast);
 }
 .bg-info .nav-link {
-  color: var(--bs-info-link-contrast) !important;
+  color: var(--bs-info-link-contrast);
+}
+.bg-info .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-info-contrast), transparent 45%);
+}
+.bg-info .navbar-nav .nav-link.active,
+.bg-info .navbar-nav .nav-link.show {
+  color: var(--bs-info-contrast);
 }
 .bg-warning .nav-link {
-  color: var(--bs-warning-link-contrast) !important;
+  color: var(--bs-warning-link-contrast);
+}
+.bg-warning .navbar-nav .nav-link {
+  color: var(--bs-navbar-color);
+}
+.bg-warning .navbar-nav .nav-link.active,
+.bg-warning .navbar-nav .nav-link.show {
+  color: var(--bs-navbar-active-color);
 }
 .bg-danger .nav-link {
-  color: var(--bs-danger-link-contrast) !important;
+  color: var(--bs-danger-link-contrast);
+}
+.bg-danger .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-danger-contrast), transparent 45%);
+}
+.bg-danger .navbar-nav .nav-link.active,
+.bg-danger .navbar-nav .nav-link.show {
+  color: var(--bs-danger-contrast);
 }
 .bg-dark .nav-link {
-  color: var(--bs-dark-link-contrast) !important;
+  color: var(--bs-dark-link-contrast);
+}
+.bg-dark .navbar-nav .nav-link {
+  color: color-mix(in srgb, var(--bs-dark-contrast), transparent 45%);
+}
+.bg-dark .navbar-nav .nav-link.active,
+.bg-dark .navbar-nav .nav-link.show {
+  color: var(--bs-dark-contrast);
 }
 .bg-light .nav-link {
-  color: var(--bs-light-link-contrast) !important;
+  color: var(--bs-light-link-contrast);
+}
+.bg-light .navbar-nav .nav-link {
+  color: var(--bs-navbar-color);
+}
+.bg-light .navbar-nav .nav-link.active,
+.bg-light .navbar-nav .nav-link.show {
+  color: var(--bs-navbar-active-color);
+}
+
+/* === Navbar brand contrast (dark backgrounds) === */
+.bg-primary .navbar-brand {
+  color: var(--bs-primary-contrast);
+}
+.bg-secondary .navbar-brand {
+  color: var(--bs-secondary-contrast);
+}
+.bg-success .navbar-brand {
+  color: var(--bs-success-contrast);
+}
+.bg-info .navbar-brand {
+  color: var(--bs-info-contrast);
+}
+.bg-danger .navbar-brand {
+  color: var(--bs-danger-contrast);
+}
+.bg-dark .navbar-brand {
+  color: var(--bs-dark-contrast);
 }
 
 /* === Universal text reset for contrast backgrounds === */

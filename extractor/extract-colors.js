@@ -152,8 +152,6 @@ function generateContrastRules() {
 
   const allColors = [...semantica, "light"];
   const textElements = [
-    ".navbar-brand",
-    ".navbar-nav .nav-link",
     ".text-muted",
     ".text-body",
     ".card-title",
@@ -171,12 +169,39 @@ function generateContrastRules() {
     rules += "}\n";
   }
 
-  // Nav links outside navbar use link-contrast to preserve default link color
-  rules += "\n/* === Nav link contrast (outside navbar) === */\n";
+  // Nav links: general rule applies to all .nav-link within .bg-*
+  // .navbar-nav .nav-link overrides (higher specificity 0,3,1) apply inside navbars
+  const darkBgColors = ["primary", "secondary", "success", "info", "danger", "dark"];
+  rules += "\n/* === Nav link contrast === */\n";
   for (const color of allColors) {
+    // General: applies to nav-links both inside and outside navbar
     rules += `.bg-${color} .nav-link {\n`;
-    rules += `  color: var(--bs-${color}-link-contrast) !important;\n`;
-    rules += "}\n";
+    rules += `  color: var(--bs-${color}-link-contrast);\n`;
+    rules += `}\n`;
+    // Navbar-specific override (higher specificity, wins inside .navbar-nav)
+    rules += `.bg-${color} .navbar-nav .nav-link {\n`;
+    if (darkBgColors.includes(color)) {
+      rules += `  color: color-mix(in srgb, var(--bs-${color}-contrast), transparent 45%);\n`;
+    } else {
+      rules += `  color: var(--bs-navbar-color);\n`;
+    }
+    rules += `}\n`;
+    rules += `.bg-${color} .navbar-nav .nav-link.active,\n`;
+    rules += `.bg-${color} .navbar-nav .nav-link.show {\n`;
+    if (darkBgColors.includes(color)) {
+      rules += `  color: var(--bs-${color}-contrast);\n`;
+    } else {
+      rules += `  color: var(--bs-navbar-active-color);\n`;
+    }
+    rules += `}\n`;
+  }
+
+  // Navbar brand (dark backgrounds only — light backgrounds use Bootstrap native)
+  rules += "\n/* === Navbar brand contrast (dark backgrounds) === */\n";
+  for (const color of darkBgColors) {
+    rules += `.bg-${color} .navbar-brand {\n`;
+    rules += `  color: var(--bs-${color}-contrast);\n`;
+    rules += `}\n`;
   }
 
   // Add universal text reset for contrast backgrounds
