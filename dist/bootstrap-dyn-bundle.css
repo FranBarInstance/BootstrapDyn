@@ -98,13 +98,21 @@
     --bs-form-invalid-color: #dc3545;
     --bs-form-invalid-border-color: #dc3545;
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 [data-bs-theme=dark] {
     --bs-body-color: #dee2e6;
@@ -160,61 +168,101 @@
     --bs-form-invalid-color: #ea868f;
     --bs-form-invalid-border-color: #ea868f;
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 :root, [data-bs-theme=light] {
     --bs-btn-close-filter:  ;
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 [data-bs-theme=dark] {
     --bs-btn-close-filter: invert(1) grayscale(100%) brightness(200%);
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 :root, [data-bs-theme=light] {
     --bs-carousel-indicator-active-bg: #fff;
     --bs-carousel-caption-color: #fff;
     --bs-carousel-control-icon-filter:  ;
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 [data-bs-theme=dark] {
     --bs-carousel-indicator-active-bg: #000;
     --bs-carousel-caption-color: #000;
     --bs-carousel-control-icon-filter: invert(1) grayscale(100);
     --bs-primary-contrast: #fff;
+    --bs-primary-link-contrast: var(--bs-primary-contrast);
     --bs-secondary-contrast: #fff;
+    --bs-secondary-link-contrast: var(--bs-secondary-contrast);
     --bs-success-contrast: #fff;
+    --bs-success-link-contrast: var(--bs-success-contrast);
     --bs-info-contrast: #fff;
+    --bs-info-link-contrast: var(--bs-info-contrast);
     --bs-danger-contrast: #fff;
+    --bs-danger-link-contrast: var(--bs-danger-contrast);
     --bs-dark-contrast: #fff;
+    --bs-dark-link-contrast: var(--bs-dark-contrast);
     --bs-warning-contrast: #000;
-    --bs-light-contrast: #000
+    --bs-warning-link-contrast: var(--bs-link-color);
+    --bs-light-contrast: #000;
+    --bs-light-link-contrast: var(--bs-link-color)
 }
 
 /* === Derived colors (dynamic) === */
@@ -13555,7 +13603,6 @@ textarea.form-control-lg {
 
 .bg-primary .navbar-brand,
 .bg-primary .navbar-nav .nav-link,
-.bg-primary .nav-link,
 .bg-primary .text-muted,
 .bg-primary .text-body,
 .bg-primary .card-title,
@@ -13565,7 +13612,6 @@ textarea.form-control-lg {
 
 .bg-secondary .navbar-brand,
 .bg-secondary .navbar-nav .nav-link,
-.bg-secondary .nav-link,
 .bg-secondary .text-muted,
 .bg-secondary .text-body,
 .bg-secondary .card-title,
@@ -13575,7 +13621,6 @@ textarea.form-control-lg {
 
 .bg-success .navbar-brand,
 .bg-success .navbar-nav .nav-link,
-.bg-success .nav-link,
 .bg-success .text-muted,
 .bg-success .text-body,
 .bg-success .card-title,
@@ -13585,7 +13630,6 @@ textarea.form-control-lg {
 
 .bg-info .navbar-brand,
 .bg-info .navbar-nav .nav-link,
-.bg-info .nav-link,
 .bg-info .text-muted,
 .bg-info .text-body,
 .bg-info .card-title,
@@ -13595,7 +13639,6 @@ textarea.form-control-lg {
 
 .bg-warning .navbar-brand,
 .bg-warning .navbar-nav .nav-link,
-.bg-warning .nav-link,
 .bg-warning .text-muted,
 .bg-warning .text-body,
 .bg-warning .card-title,
@@ -13605,7 +13648,6 @@ textarea.form-control-lg {
 
 .bg-danger .navbar-brand,
 .bg-danger .navbar-nav .nav-link,
-.bg-danger .nav-link,
 .bg-danger .text-muted,
 .bg-danger .text-body,
 .bg-danger .card-title,
@@ -13615,7 +13657,6 @@ textarea.form-control-lg {
 
 .bg-dark .navbar-brand,
 .bg-dark .navbar-nav .nav-link,
-.bg-dark .nav-link,
 .bg-dark .text-muted,
 .bg-dark .text-body,
 .bg-dark .card-title,
@@ -13625,12 +13666,37 @@ textarea.form-control-lg {
 
 .bg-light .navbar-brand,
 .bg-light .navbar-nav .nav-link,
-.bg-light .nav-link,
 .bg-light .text-muted,
 .bg-light .text-body,
 .bg-light .card-title,
 .bg-light .card-text {
   color: var(--bs-light-contrast) !important;
+}
+
+/* === Nav link contrast (outside navbar) === */
+.bg-primary .nav-link {
+  color: var(--bs-primary-link-contrast) !important;
+}
+.bg-secondary .nav-link {
+  color: var(--bs-secondary-link-contrast) !important;
+}
+.bg-success .nav-link {
+  color: var(--bs-success-link-contrast) !important;
+}
+.bg-info .nav-link {
+  color: var(--bs-info-link-contrast) !important;
+}
+.bg-warning .nav-link {
+  color: var(--bs-warning-link-contrast) !important;
+}
+.bg-danger .nav-link {
+  color: var(--bs-danger-link-contrast) !important;
+}
+.bg-dark .nav-link {
+  color: var(--bs-dark-link-contrast) !important;
+}
+.bg-light .nav-link {
+  color: var(--bs-light-link-contrast) !important;
 }
 
 /* === Universal text reset for contrast backgrounds === */

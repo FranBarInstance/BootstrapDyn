@@ -17,7 +17,6 @@
 
 .bg-primary .navbar-brand,
 .bg-primary .navbar-nav .nav-link,
-.bg-primary .nav-link,
 .bg-primary .text-muted,
 .bg-primary .text-body,
 .bg-primary .card-title,
@@ -27,7 +26,6 @@
 
 .bg-secondary .navbar-brand,
 .bg-secondary .navbar-nav .nav-link,
-.bg-secondary .nav-link,
 .bg-secondary .text-muted,
 .bg-secondary .text-body,
 .bg-secondary .card-title,
@@ -37,7 +35,6 @@
 
 .bg-success .navbar-brand,
 .bg-success .navbar-nav .nav-link,
-.bg-success .nav-link,
 .bg-success .text-muted,
 .bg-success .text-body,
 .bg-success .card-title,
@@ -47,7 +44,6 @@
 
 .bg-info .navbar-brand,
 .bg-info .navbar-nav .nav-link,
-.bg-info .nav-link,
 .bg-info .text-muted,
 .bg-info .text-body,
 .bg-info .card-title,
@@ -57,7 +53,6 @@
 
 .bg-warning .navbar-brand,
 .bg-warning .navbar-nav .nav-link,
-.bg-warning .nav-link,
 .bg-warning .text-muted,
 .bg-warning .text-body,
 .bg-warning .card-title,
@@ -67,7 +62,6 @@
 
 .bg-danger .navbar-brand,
 .bg-danger .navbar-nav .nav-link,
-.bg-danger .nav-link,
 .bg-danger .text-muted,
 .bg-danger .text-body,
 .bg-danger .card-title,
@@ -77,7 +71,6 @@
 
 .bg-dark .navbar-brand,
 .bg-dark .navbar-nav .nav-link,
-.bg-dark .nav-link,
 .bg-dark .text-muted,
 .bg-dark .text-body,
 .bg-dark .card-title,
@@ -87,12 +80,37 @@
 
 .bg-light .navbar-brand,
 .bg-light .navbar-nav .nav-link,
-.bg-light .nav-link,
 .bg-light .text-muted,
 .bg-light .text-body,
 .bg-light .card-title,
 .bg-light .card-text {
   color: var(--bs-light-contrast) !important;
+}
+
+/* === Nav link contrast (outside navbar) === */
+.bg-primary .nav-link {
+  color: var(--bs-primary-link-contrast) !important;
+}
+.bg-secondary .nav-link {
+  color: var(--bs-secondary-link-contrast) !important;
+}
+.bg-success .nav-link {
+  color: var(--bs-success-link-contrast) !important;
+}
+.bg-info .nav-link {
+  color: var(--bs-info-link-contrast) !important;
+}
+.bg-warning .nav-link {
+  color: var(--bs-warning-link-contrast) !important;
+}
+.bg-danger .nav-link {
+  color: var(--bs-danger-link-contrast) !important;
+}
+.bg-dark .nav-link {
+  color: var(--bs-dark-link-contrast) !important;
+}
+.bg-light .nav-link {
+  color: var(--bs-light-link-contrast) !important;
 }
 
 /* === Universal text reset for contrast backgrounds === */

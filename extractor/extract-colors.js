@@ -90,9 +90,11 @@ function addContrastVars(themeNodes) {
   themeNodes.forEach(node => {
     for (const name of darkSemantics) {
       node.append({ prop: `--bs-${name}-contrast`, value: "#fff" });
+      node.append({ prop: `--bs-${name}-link-contrast`, value: `var(--bs-${name}-contrast)` });
     }
     for (const name of lightSemantics) {
       node.append({ prop: `--bs-${name}-contrast`, value: "#000" });
+      node.append({ prop: `--bs-${name}-link-contrast`, value: "var(--bs-link-color)" });
     }
   });
 }
@@ -152,7 +154,6 @@ function generateContrastRules() {
   const textElements = [
     ".navbar-brand",
     ".navbar-nav .nav-link",
-    ".nav-link",
     ".text-muted",
     ".text-body",
     ".card-title",
@@ -167,6 +168,14 @@ function generateContrastRules() {
     // Remove the last comma and newline, add closing brace
     rules = rules.slice(0, -2) + " {\n";
     rules += `  color: var(--bs-${color}-contrast) !important;\n`;
+    rules += "}\n";
+  }
+
+  // Nav links outside navbar use link-contrast to preserve default link color
+  rules += "\n/* === Nav link contrast (outside navbar) === */\n";
+  for (const color of allColors) {
+    rules += `.bg-${color} .nav-link {\n`;
+    rules += `  color: var(--bs-${color}-link-contrast) !important;\n`;
     rules += "}\n";
   }
 
