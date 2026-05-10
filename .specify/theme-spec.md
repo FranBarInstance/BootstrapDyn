@@ -2,6 +2,8 @@
 
 This document specifies the file naming convention, load order, and creation procedure for BootstrapDyn theme modules. It is referenced by [`.specify/spec.md`](spec.md) Section 10.
 
+**Note on Scope:** This specification is strictly intended for the development and maintenance of the application. End-users creating themes for their own use have greater freedom regarding style and compatibility, provided the core functionality remains intact.
+
 ## 1. Theme Module Substitute Model
 
 Theme files are **module substitutes**, not additive overrides. A custom theme module must replace the matching `dist/default-*.css` file in the load list. Do not load both files for the same concern.

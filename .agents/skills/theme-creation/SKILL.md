@@ -18,6 +18,8 @@ If there is any conflict, `.specify/spec.md` wins.
 
 ## Core Contract
 
+**Exception for User Themes:** The user may request features that break the specification ONLY when creating themes that will not be distributed with the application. Never break the specification for themes located in `examples/` or any other directory included in the official distribution. Unless this exception applies, always enforce the strict rules below.
+
 - Theme files are **substitutes** for `dist/default-*.css`. They replace the defaults; they are never loaded alongside them.
 - A theme file must be built by copying the matching `dist/default-<concern>.css` and editing values only.
 - **Never copy or modify `dist/bootstrap-dyn.css` or `dist/contrast-dyn.css`.** These are generated artifacts loaded as-is from `dist/`.
