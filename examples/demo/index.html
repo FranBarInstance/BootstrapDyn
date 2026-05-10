@@ -108,16 +108,20 @@
     <div>
       <h1>BootstrapDyn Visual Comparison</h1>
     </div>
-    <div class="header-controls">
-      <label>
-        Right panel:
-        <select id="right-panel-select">
-          <option value="dyn.html" selected>BootstrapDyn (dyn.html)</option>
-          <option value="bundle.html">BootstrapDyn Bundle (bundle.html)</option>
-          <option value="theme.html">BootstrapDyn Theme (theme.html)</option>
-        </select>
-      </label>
-    </div>
+     <div class="header-controls">
+       <label>
+         Right panel:
+         <select id="right-panel-select">
+           <option value="dyn.html" selected>dyn.html</option>
+           <option value="bundle.html">bundle.html</option>
+           <option value="theme.html">theme.html</option>
+         </select>
+       </label>
+       <label>
+         <input type="checkbox" id="sync-scroll-checkbox" checked>
+         Sync scroll
+       </label>
+     </div>
   </div>
 
   <div class="container">
@@ -140,28 +144,97 @@
     </div>
   </div>
 
-  <script>
-    const select = document.getElementById('right-panel-select');
-    const rightFrame = document.getElementById('frame-right');
-    const rightFrameTitle = document.getElementById('right-frame-title');
-    const rightFrameLink = document.getElementById('right-frame-link');
+    <script>
+      const select = document.getElementById('right-panel-select');
+      const rightFrame = document.getElementById('frame-right');
+      const rightFrameTitle = document.getElementById('right-frame-title');
+      const rightFrameLink = document.getElementById('right-frame-link');
+      const leftFrame = document.getElementById('frame-org');
+      const syncCheckbox = document.getElementById('sync-scroll-checkbox');
 
-    select.addEventListener('change', function() {
-      const selectedPage = this.value;
-      rightFrame.src = selectedPage;
+      let raf = null;
 
-      // Update title
-      const titles = {
-        'dyn.html': 'BootstrapDyn (dyn.html)',
-        'bundle.html': 'BootstrapDyn Bundle (bundle.html)',
-        'theme.html': 'BootstrapDyn Theme (theme.html)'
-      };
-      rightFrameTitle.textContent = titles[selectedPage];
+      const sectionIds = [
+        'navbar', 'buttons', 'cards', 'grid', 'alerts', 'lists',
+        'forms', 'navigation', 'typography', 'tables',
+        'accordion', 'carousel'
+      ];
 
-      // Update link
-      rightFrameLink.href = selectedPage;
-    });
-  </script>
+      function syncScroll() {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          try {
+            const sourceDoc = leftFrame.contentDocument || leftFrame.contentWindow.document;
+            const targetDoc = rightFrame.contentDocument || rightFrame.contentWindow.document;
+            if (!sourceDoc || !targetDoc) return;
+
+            const sDoc = sourceDoc.documentElement;
+            const tDoc = targetDoc.documentElement;
+            const sH = sDoc.scrollHeight, tH = tDoc.scrollHeight;
+            const sC = sDoc.clientHeight, tC = tDoc.clientHeight;
+            if (sH <= sC || tH <= tC) return;
+
+            const srcTop = leftFrame.contentWindow.pageYOffset || sDoc.scrollTop;
+            const maxSrc = sH - sC;
+            const maxTgt = tH - tC;
+
+            // Match the closest section above the source viewport
+            let bestId = null, bestDist = Infinity;
+            for (const id of sectionIds) {
+              const el = sourceDoc.getElementById(id);
+              if (el) {
+                const d = srcTop - el.offsetTop;
+                if (d >= 0 && d < bestDist) { bestDist = d; bestId = id; }
+              }
+            }
+
+            if (bestId) {
+              const targetEl = targetDoc.getElementById(bestId);
+              if (targetEl) {
+                let t = targetEl.offsetTop + bestDist;
+                t = Math.max(0, Math.min(maxTgt, t));
+                rightFrame.contentWindow.scrollTo(0, t);
+                raf = null;
+                return;
+              }
+            }
+
+            // Fallback: proportional scroll for pre-section area
+            rightFrame.contentWindow.scrollTo(0, (srcTop / maxSrc) * maxTgt);
+          } catch (e) {
+            console.warn('Scroll sync error:', e.message);
+          }
+          raf = null;
+        });
+      }
+
+      leftFrame.addEventListener('load', () => {
+        leftFrame.contentWindow.addEventListener('scroll', () => {
+          if (syncCheckbox.checked) syncScroll();
+        }, { passive: true });
+      });
+
+      rightFrame.addEventListener('load', () => {
+        if (syncCheckbox.checked) requestAnimationFrame(syncScroll);
+      });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        if (syncCheckbox.checked) resizeTimer = setTimeout(syncScroll, 200);
+      });
+
+      select.addEventListener('change', function() {
+        const page = this.value;
+        rightFrame.src = page;
+        rightFrameTitle.textContent = {
+          'dyn.html': 'BootstrapDyn (dyn.html)',
+          'bundle.html': 'BootstrapDyn Bundle (bundle.html)',
+          'theme.html': 'BootstrapDyn Theme (theme.html)'
+        }[page];
+        rightFrameLink.href = page;
+      });
+    </script>
 
 </body>
 </html>
