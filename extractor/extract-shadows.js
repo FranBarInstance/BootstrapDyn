@@ -42,6 +42,16 @@ function normalizeShadowTokenValue(selector, prop, value) {
   return v;
 }
 
+function isTableAccentPaintShadow(selector, prop, value) {
+  return (
+    selector === ".table > :not(caption) > * > *" &&
+    prop === "box-shadow" &&
+    value.includes("--bs-table-bg-state") &&
+    value.includes("--bs-table-bg-type") &&
+    value.includes("--bs-table-accent-bg")
+  );
+}
+
 export async function processShadows(inputCssPath, outputDir = "./dist") {
   const rawCss = await fs.readFile(inputCssPath, "utf8");
   const root = postcss.parse(rawCss);
@@ -74,6 +84,9 @@ export async function processShadows(inputCssPath, outputDir = "./dist") {
     while (rule && rule.type !== "rule") rule = rule.parent;
     if (!rule || !rule.selectors || !rule.selectors[0]) return;
     const selector = rule.selectors[0].trim();
+
+    if (isTableAccentPaintShadow(selector, decl.prop, rawVal)) return;
+
     const normalizedVal = normalizeShadowTokenValue(selector, decl.prop, rawVal);
 
     if (!isShadowLiteral(normalizedVal)) {

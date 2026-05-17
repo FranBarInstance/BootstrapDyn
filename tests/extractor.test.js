@@ -253,6 +253,13 @@ describe("extractor pipeline", () => {
     it("contains derived shadow variables", () => {
       assert(content.includes("--bs-dyn-"), "missing dynamic shadow vars");
     });
+
+    it("does not extract Bootstrap's internal table accent paint shadow", () => {
+      assert(
+        !content.includes("--bs-dyn-table-not-caption-box-shadow"),
+        "table accent paint shadow should remain in bootstrap-dyn.css"
+      );
+    });
   });
 
   describe("default-borders.css", () => {
@@ -484,6 +491,21 @@ describe("extractor pipeline", () => {
       assert(
         !content.includes("border-top-right-radius: var(--bs-border-radius-top-right, 0));"),
         "border-radius fallback has an extra closing parenthesis"
+      );
+    });
+
+    it("keeps table striped, active, and hover paint behavior inline", () => {
+      assert(
+        content.includes("box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));"),
+        "table accent paint shadow was tokenized"
+      );
+      assert(
+        content.includes("--bs-table-bg-type: var(--bs-table-striped-bg);"),
+        "missing striped table background state"
+      );
+      assert(
+        content.includes("--bs-table-bg-state: var(--bs-table-hover-bg);"),
+        "missing hover table background state"
       );
     });
   });
